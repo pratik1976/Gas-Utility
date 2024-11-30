@@ -1,0 +1,8 @@
+<h2>Your Service Requests</h2>
+<ul>
+    {% for request in requests %}
+        <li>
+            <a href="{% url 'track_request' request.id %}">{{ request.request_type }} - {{ request.status }}</a>
+        </li>
+    {% endfor %}
+</ul>
